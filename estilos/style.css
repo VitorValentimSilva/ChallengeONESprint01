@@ -100,11 +100,18 @@ button{
 
 #mensagem >p{
   background-color: #FFFFFF;
-  text-align: center;
   width: 336px;
 }
 
+#msgCriptografada{
+  color: #495057;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 15px;
+}
+
 #nenhumaMensagem{
+  text-align: center;
   font-size: 24px;
   font-weight: 700;
   color: #343A40;
@@ -112,7 +119,18 @@ button{
 }
 
 #textoDesejado{
+  text-align: center;
   font-size: 16px;
   font-weight: 400;
   color: #495057;
+}
+
+#botaoCopiar{
+  display: none;
+  padding: 20px 145px 20px 145px;
+  margin-bottom: 25px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--cor-principal);
+  border: 1px solid var(--cor-principal);
 }

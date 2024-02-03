@@ -23,19 +23,25 @@
         </div>
       
         <div id="botoes">
-          <button id="criptografar">Criptografar</button>
-          <button id="descriptografar">Descriptografar</button>
+          <button id="criptografar" onclick="criptografar()">Criptografar</button>
+          <button id="descriptografar" onclick="descriptografar()">Descriptografar</button>
         </div>
       </div>
     </section>
 
     <section id="mensagem">
-      <img src="img/High quality products 1 1.svg" alt="">
+      <p id="msgCriptografada"></p>
+
+      <img src="img/High quality products 1 1.svg" alt="" id="imgDaSectionMensagem">
 
       <p id="nenhumaMensagem">Nenhuma mensagem encontrada</p>
 
       <p id="textoDesejado">Digite um texto que você deseja criptografar ou descriptografar.</p>
+
+      <button id="botaoCopiar">Copiar</button>
     </section>
   </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
