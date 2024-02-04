@@ -1,11 +1,13 @@
+var msgCriptografada = ''
+var pCriptografada = document.querySelector("#msgCriptografada")
+
 function criptografar(){
+  let texto = document.querySelector("#itexto").value
   let sectionMsg = document.querySelector("#mensagem")
-  let pCriptografada = document.querySelector("#msgCriptografada")
   let img = document.querySelector("#imgDaSectionMensagem")
   let nenhumaMsg = document.querySelector("#nenhumaMensagem")
   let textoDesejado = document.querySelector("#textoDesejado")
   let botaoCopiar = document.querySelector("#botaoCopiar")
-  let msgCriptografada = ''
 
   for(let i = 0; i < texto.length; i++){
     if(texto[i] == 'a'){
@@ -33,6 +35,17 @@ function criptografar(){
   nenhumaMsg.style.display = "none"
   textoDesejado.style.display = "none"
   botaoCopiar.style.display = "flex"
+  document.querySelector("#itexto").value = ''
 
   pCriptografada.innerHTML = `${msgCriptografada}`
+  msgCriptografada = ''
+}
+
+function copiar(){
+  let textoCriptografado = document.querySelector("#msgCriptografada").innerText
+    navigator.clipboard.writeText(textoCriptografado).then(function() {
+      pCriptografada.innerHTML = 'Mensagem copiada!'
+    }, function(err) {
+      pCriptografada.innerHTML = 'Erro ao copiar a mensagem!'
+    });
 }

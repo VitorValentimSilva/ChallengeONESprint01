@@ -24,12 +24,12 @@ header > img{
 #criptografarMensagem{
   display: flex;
   flex-direction: column;
-  gap: 420px;
+  gap: 50px;
   width: 50%;
   padding-left: 15%;
 }
 
-input{
+textarea{
   border: none;
   outline: none;
   font-weight: 400;
@@ -37,7 +37,7 @@ input{
   margin-top: 50px;
 }
 
-input::placeholder {
+textarea::placeholder {
   color: var(--cor-principal); 
 }
 
@@ -108,6 +108,7 @@ button{
   font-size: 20px;
   font-weight: 400;
   margin-top: 15px;
+  margin-right: 25px;
 }
 
 #nenhumaMensagem{
