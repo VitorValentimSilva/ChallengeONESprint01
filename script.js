@@ -49,3 +49,37 @@ function copiar(){
       pCriptografada.innerHTML = 'Erro ao copiar a mensagem!'
     });
 }
+
+function descriptografar(){
+  let texto = document.querySelector("#itexto").value
+
+  for(let i = 0; i < texto.length; i++){
+    if(texto[i] == 'a' && texto[i+1] == 'i'){
+      msgCriptografada += "a"
+      i++
+    }
+    else if(texto[i] == 'e' && texto[i+1] == 'n' && texto[i+2] == 't' && texto[i+3] == 'e' && texto[i+4] == 'r' && msgCriptografada.slice(-1) !== 'e'){
+      msgCriptografada += "e"
+      i += 4
+    }
+    else if(texto[i] == 'i' && texto[i+1] == 'm' && texto[i+2] == 'e' && texto[i+3] == 's'){
+      msgCriptografada += "i"
+      i += 3
+    }
+    else if(texto[i] == 'o' && texto[i+1] == 'b' && texto[i+2] == 'e' && texto[i+3] == 'r'){
+      msgCriptografada += "o"
+      i += 3
+    }
+    else if(texto[i] == 'u' && texto[i+1] == 'f' && texto[i+2] == 'a' && texto[i+3] == 't'){
+      msgCriptografada += "u"
+      i += 3
+    }
+    else{
+      msgCriptografada += texto[i]
+    }
+  }
+
+  document.querySelector("#itexto").value = ''
+  pCriptografada.innerHTML = `${msgCriptografada}`
+  msgCriptografada = ''
+}
