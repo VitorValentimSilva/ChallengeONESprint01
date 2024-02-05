@@ -18,7 +18,7 @@ main{
 }
 
 header > img{
-  margin: 40px 0px 0px 20px;
+  margin: 4% 0% 0% 2%;
 }
 
 #criptografarMensagem{
@@ -61,7 +61,7 @@ textarea::placeholder {
 button{
   cursor: pointer;
   border-radius: 24px;
-  padding: 15px 100px 15px 100px;
+  padding: 2% 16% 2% 16%;
   font-weight: 400;
   font-size: 16px;
 }
@@ -128,10 +128,44 @@ button{
 
 #botaoCopiar{
   display: none;
-  padding: 20px 145px 20px 145px;
-  margin-bottom: 25px;
+  padding: 5% 36% 5% 36%;
+  margin-bottom: 5%;
   font-size: 16px;
   font-weight: 400;
   color: var(--cor-principal);
   border: 1px solid var(--cor-principal);
+}
+
+@media screen and (max-width: 1215px){
+  main{
+    flex-direction: column;
+  }
+
+  #criptografarMensagem{
+    padding-left: 0%;
+    margin: auto;
+  }
+
+  #mensagem{
+    width: auto;
+    height: auto;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 0% 5% 2% 5%;
+  }
+
+  #msgCriptografada{
+    margin-bottom: 5%;
+  }
+
+  #imgDaSectionMensagem{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 779px){
+  #botoes{
+    flex-direction: column;
+  }
 }
